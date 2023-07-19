@@ -1,14 +1,13 @@
 import typing
 
 import orjson
-from pydantic.generics import GenericModel
 
 from ._base import BaseModel
 
 ResponseBodyT = typing.TypeVar("ResponseBodyT", bound=BaseModel)
 
 
-class Response(GenericModel, typing.Generic[ResponseBodyT]):
+class Response(BaseModel, typing.Generic[ResponseBodyT]):
     status_code: int
     content: bytes
     headers: typing.MutableMapping[str, str]
