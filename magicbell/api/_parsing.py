@@ -31,7 +31,7 @@ def build_response(
         status_code=response.status_code,
         content=response.content,
         headers=response.headers,
-        parsed=out_type.parse_raw(response.content) if out_type else None,
+        parsed=out_type.model_validate_json(response.content) if out_type else None,
     )
 
 
@@ -40,5 +40,5 @@ def build_request_content(
 ) -> typing.Union[str, bytes]:
     """Transform a `BaseModel` or a `dict` into a `str` or `bytes` for use with an http request."""
     if isinstance(content, BaseModel):
-        return content.json(exclude_unset=True)
+        return content.model_dump_json(exclude_unset=True)
     return orjson.dumps(content)
