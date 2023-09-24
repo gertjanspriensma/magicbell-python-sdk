@@ -2,7 +2,7 @@ import httpx
 import pytest
 
 from magicbell import MagicBell
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 from tests.mock_server import api_key, api_secret, app, user_jwt
 
 

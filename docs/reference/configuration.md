@@ -1,1 +1,1 @@
-:::magicbell.configuration.Configuration
+:::belfry_magicbell.configuration.Configuration

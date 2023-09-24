@@ -1,1 +1,1 @@
-::: magicbell.client.MagicBell
+::: belfry_magicbell.client.MagicBell

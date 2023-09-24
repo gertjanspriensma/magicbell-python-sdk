@@ -1,10 +1,10 @@
-import magicbell
+import belfry_magicbell
 
-test_channels = magicbell.WrappedChannels(
+test_channels = belfry_magicbell.WrappedChannels(
     channels=[
-        magicbell.Channel(
+        belfry_magicbell.Channel(
             slug="email",
-            configuration=magicbell.ChannelConfiguration(
+            configuration=belfry_magicbell.ChannelConfiguration(
                 providers={
                     "mailgun": {
                         "enabled": True,
@@ -19,12 +19,12 @@ test_channels = magicbell.WrappedChannels(
 
 
 class TestUpdateChannels:
-    async def test_channels_can_be_updated(self, magicbell_client: magicbell.MagicBell):
+    async def test_channels_can_be_updated(self, magicbell_client: belfry_magicbell.MagicBell):
         await magicbell_client.channels.update_channels(wrapped_channels=test_channels)
 
 
 class TestUpdateChannelsDetailed:
-    async def test_response_can_be_accessed(self, magicbell_client: magicbell.MagicBell):
+    async def test_response_can_be_accessed(self, magicbell_client: belfry_magicbell.MagicBell):
         response = await magicbell_client.channels.update_channels_detailed(
             wrapped_channels=test_channels
         )
@@ -33,7 +33,7 @@ class TestUpdateChannelsDetailed:
 
 
 class TestGetChannels:
-    async def test_response_is_parsed(self, magicbell_client: magicbell.MagicBell):
+    async def test_response_is_parsed(self, magicbell_client: belfry_magicbell.MagicBell):
         response = await magicbell_client.channels.get_channels()
         email_channel = response.channels[0]
 

@@ -15,7 +15,7 @@ class Configuration(BaseSettings):
     Examples
     --------
     >>> import os
-    >>> from magicbell.configuration import Configuration
+    >>> from belfry_magicbell.configuration import Configuration
     >>> config = Configuration(api_key="my-api-key", api_secret="my-api-secret")
     >>> os.environ["MAGICBELL_API_KEY"] = "my-api-key"
     >>> os.environ["MAGICBELL_API_SECRET"] = "my-api-secret"
@@ -24,7 +24,7 @@ class Configuration(BaseSettings):
     """
 
     api_url: str = Field(
-        "https://api.magicbell.com", description="The base URL for the Magicbell API."
+        "https://api.belfry_magicbell.com", description="The base URL for the Magicbell API."
     )
     api_key: typing.Optional[str] = Field(
         description="API key for the Magicbell API, sent as `X-MAGICBELL-API-KEY` header.", default=None
