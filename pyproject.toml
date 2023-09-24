@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "magicbell"
+name = "belfry-magicbell"
 version = "2.0.0"
 description = "Fork of the unofficial Python SDK for MagicBell"
 authors = ["Alex Tulenko <alex@belfrysoftware.com>"]
