@@ -1,7 +1,7 @@
 import pytest
 
 import belfry_magicbell
-from magicbell import errors
+from belfry_magicbell import errors
 
 
 class TestCreateNotification:

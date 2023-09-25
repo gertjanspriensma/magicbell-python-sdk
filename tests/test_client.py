@@ -7,7 +7,7 @@ import pytest
 from httpx._client import ClientState
 
 import belfry_magicbell
-from magicbell import errors
+from belfry_magicbell import errors
 from belfry_magicbell.configuration import Configuration
 
 

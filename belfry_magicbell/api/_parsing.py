@@ -4,7 +4,7 @@ import httpx
 import orjson
 from pydantic import BaseModel
 
-from magicbell import errors
+from belfry_magicbell import errors
 from belfry_magicbell.model import Response, ResponseBodyT
 
 
