@@ -8,7 +8,7 @@ from ._base import BaseModel
 class Recipient(BaseModel):
     """Represents a recipient in MagicBell."""
 
-    email: typing.Optional[str] = Field(description="The user's email")
+    email: typing.Optional[str] = Field(None, description="The user's email")
     external_id: typing.Optional[str] = Field(
         description="A unique string that MagicBell can utilize to uniquely identify the user. "
         "We recommend setting this attribute to the ID of the user in your database. "
@@ -21,16 +21,16 @@ class Recipient(BaseModel):
 
 
 class ChannelOverrides(BaseModel):
-    title: typing.Optional[str] = Field(description="Overridden title for this channel")
-    content: typing.Optional[str] = Field(description="Overridden content for this channel")
-    action_url: typing.Optional[str] = Field(description="Overridden action URL for this channel")
+    title: typing.Optional[str] = Field(None, description="Overridden title for this channel")
+    content: typing.Optional[str] = Field(None, description="Overridden content for this channel")
+    action_url: typing.Optional[str] = Field(None, description="Overridden action URL for this channel")
 
 
 class NotificationChannelsOverrides(BaseModel):
-    in_app: typing.Optional[ChannelOverrides]
-    email: typing.Optional[ChannelOverrides]
-    web_push: typing.Optional[ChannelOverrides]
-    mobile_push: typing.Optional[ChannelOverrides]
+    in_app: typing.Optional[ChannelOverrides] = None
+    email: typing.Optional[ChannelOverrides] = None
+    web_push: typing.Optional[ChannelOverrides] = None
+    mobile_push: typing.Optional[ChannelOverrides] = None
 
 
 class NotificationProvidersOverrides(BaseModel):

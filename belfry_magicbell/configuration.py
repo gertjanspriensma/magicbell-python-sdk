@@ -1,6 +1,6 @@
 import typing
 
-from pydantic_settings import BaseSettings
+from pydantic_settings import SettingsConfigDict, BaseSettings
 from pydantic import Field
 
 from ._version import __version__
@@ -42,9 +42,7 @@ class Configuration(BaseSettings):
         description="The timeout for requests. "
         "An exception will be raised if the request takes longer than this.",
     )
-
-    class Config:
-        env_prefix = "magicbell_"
+    model_config = SettingsConfigDict(env_prefix="magicbell_")
 
     def get_general_headers(
         self, idempotency_key: typing.Optional[str] = None
