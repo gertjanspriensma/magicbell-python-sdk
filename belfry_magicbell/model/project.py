@@ -31,7 +31,7 @@ class ProjectInput(BaseModel):
     """Fields for creating or updating a project."""
 
     name: str
-    hmac_enabled: typing.Optional[bool] = None
+    hmac_enabled: typing.Optional[bool]
 
 
 class WrappedProjectInput(BaseModel):

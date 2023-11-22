@@ -16,7 +16,7 @@ class RealtimeAPI(BaseAPI):
     ) -> WrappedCreatedNotificationBroadcast:
         """Send a notification to one or multiple users, returning a `Notification`.
         Specify `idempotency_key` to prevent duplicate notifications.
-        https://www.belfry_magicbell.com/docs/rest-api/idempotent-requests
+        https://www.magicbell.com/docs/rest-api/idempotent-requests
         """
         return (
             await self.create_notification_detailed(wrapped_notification, idempotency_key)
@@ -29,7 +29,7 @@ class RealtimeAPI(BaseAPI):
     ) -> Response[WrappedCreatedNotificationBroadcast]:
         """Send a notification to one or multiple users, returning a `Response`.
         Specify `idempotency_key` to prevent duplicate notifications.
-        https://www.belfry_magicbell.com/docs/rest-api/idempotent-requests
+        https://www.magicbell.com/docs/rest-api/idempotent-requests
         """
         response = await self.client.post(
             "/notifications",
