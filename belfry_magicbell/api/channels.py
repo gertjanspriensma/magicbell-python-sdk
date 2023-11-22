@@ -27,7 +27,7 @@ class ChannelsAPI(BaseAPI):
         """
         response = await self.client.post(
             "/channels",
-            content=wrapped_channels.model_dump_json(exclude_unset=True),
+            content=wrapped_channels.json(exclude_unset=True),
             headers=self.configuration.get_general_headers(idempotency_key=idempotency_key),
         )
         return build_response(response=response, out_type=None)

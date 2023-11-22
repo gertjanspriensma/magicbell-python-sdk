@@ -1,8 +1,8 @@
-import belfry_magicbell
+import magicbell
 
 
 class TestQuery:
-    async def test_response_is_parsed(self, magicbell_client: belfry_magicbell.MagicBell):
+    async def test_response_is_parsed(self, magicbell_client: magicbell.MagicBell):
         response = await magicbell_client.graphql.query(
             "query test($foo: String){ logs(foo: $foo) { id } }", variables={"foo": "bar"}
         )
@@ -10,7 +10,7 @@ class TestQuery:
 
 
 class TestQueryDetailed:
-    async def test_response_can_be_accessed(self, magicbell_client: belfry_magicbell.MagicBell):
+    async def test_response_can_be_accessed(self, magicbell_client: magicbell.MagicBell):
         response = await magicbell_client.graphql.query_detailed(
             "query test($foo: String){ logs(foo: $foo) { id } }", variables={"foo": "bar"}
         )
@@ -19,7 +19,7 @@ class TestQueryDetailed:
 
 
 class TestUserQuery:
-    async def test_response_is_parsed(self, magicbell_client: belfry_magicbell.MagicBell):
+    async def test_response_is_parsed(self, magicbell_client: magicbell.MagicBell):
         response = await magicbell_client.graphql.user_query(
             "query { notifications { id }}", user_hmac="hmac_123", user_external_id="123"
         )
@@ -27,7 +27,7 @@ class TestUserQuery:
 
 
 class TestUserQueryDetailed:
-    async def test_response_can_be_accessed(self, magicbell_client: belfry_magicbell.MagicBell):
+    async def test_response_can_be_accessed(self, magicbell_client: magicbell.MagicBell):
         response = await magicbell_client.graphql.user_query_detailed(
             "query { notifications { id }}", user_hmac="hmac_123", user_external_id="123"
         )
