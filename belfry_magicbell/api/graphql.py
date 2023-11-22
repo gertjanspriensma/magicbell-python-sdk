@@ -8,7 +8,7 @@ from ._parsing import build_response
 
 class GraphQLAPI(BaseAPI):
     """Perform GraphQL queries and mutations against the MagicBell GraphQL API.
-    https://www.magicbell.com/docs/graphql-api/overview
+    https://www.belfry_magicbell.com/docs/graphql-api/overview
     """
 
     async def query(
