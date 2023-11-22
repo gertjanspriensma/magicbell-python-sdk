@@ -9,7 +9,7 @@ class ChannelConfiguration(BaseModel):
 
 class Channel(BaseModel):
     slug: str
-    configuration: typing.Optional[ChannelConfiguration]
+    configuration: typing.Optional[ChannelConfiguration] = None
 
 
 class WrappedChannels(BaseModel):
