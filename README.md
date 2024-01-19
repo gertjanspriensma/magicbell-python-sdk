@@ -1,4 +1,4 @@
-# belfry_magicbell-Python SDK
+# MagicBell-Python SDK
 
 <p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
@@ -20,7 +20,7 @@ It includes helpers for creating notifications, managing users, managing project
 
 ---------
 
-This is an unofficial Python SDK for [belfry_magicbell](https://belfry_magicbell.com) open sourced with ❤️ by <a href="https://noteable.io">Noteable</a>, a collaborative notebook platform that enables teams to use and visualize data, together.
+This is an unofficial Python SDK for [MagicBell](https://belfry_magicbell.com) open sourced with ❤️ by <a href="https://noteable.io">Noteable</a>, a collaborative notebook platform that enables teams to use and visualize data, together.
 
 [Install](#installation) | [Getting Started](#getting-started) | [Examples](./examples) | [License](./LICENSE) | [Code of Conduct](./CODE_OF_CONDUCT.md) | [Contributing](./CONTRIBUTING.md)
 
@@ -104,8 +104,8 @@ config = Configuration(
 #### Implicit Configuration
 
 ```shell
-export belfry_magicbell_API_KEY="YOUR_API_KEY"
-export belfry_magicbell_API_SECRET="YOUR_API_SECRET"
+export MAGICBELL_API_KEY="YOUR_API_KEY"
+export MAGICBELL_API_SECRET="YOUR_API_SECRET"
 ```
 
 ```python
