@@ -109,29 +109,29 @@ async def create_notifications(request: Request):
     verify_api_key_and_secret(request)
 
     data = await request.json()
-    if "notification" not in data:
+    if "broadcast" not in data:
         raise HTTPException(
             status.HTTP_422_UNPROCESSABLE_ENTITY,
             {
                 "errors": [
                     {
-                        "message": "Param 'notification' is required",
+                        "message": "Param 'broadcast' is required",
                     }
                 ]
             },
         )
 
-    notification = data["notification"]
+    notification = data["broadcast"]
     if not ("title" in notification and "recipients" in notification):
         raise HTTPException(
             status.HTTP_422_UNPROCESSABLE_ENTITY,
             {
                 "errors": [
                     {
-                        "message": "Param 'notification.title' is required",
+                        "message": "Param 'broadcast.title' is required",
                     },
                     {
-                        "message": "Param 'notification.recipients' is required",
+                        "message": "Param 'broadcast.recipients' is required",
                     },
                 ]
             },
@@ -139,7 +139,7 @@ async def create_notifications(request: Request):
 
     return JSONResponse(
         {
-            "notification": {
+            "broadcast": {
                 "id": str(uuid.uuid4()),
                 "title": notification["title"],
                 "content": notification.get("content"),

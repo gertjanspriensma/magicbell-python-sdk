@@ -17,7 +17,7 @@ class TestCreateNotification:
     async def test_response_is_parsed(self, magicbell_client: belfry_magicbell.MagicBell):
         response = await magicbell_client.realtime.create_notification(
             belfry_magicbell.WrappedNotification(
-                notification=belfry_magicbell.Notification(
+                broadcast=belfry_magicbell.Notification(
                     title="Test notification",
                     recipients=[belfry_magicbell.Recipient(email="foo@bar.com")],
                     overrides=belfry_magicbell.NotificationOverrides(
@@ -28,6 +28,7 @@ class TestCreateNotification:
                 )
             )
         )
+        print(response)
 
         assert isinstance(response, belfry_magicbell.WrappedCreatedNotificationBroadcast)
-        assert response.notification.id is not None
+        assert response.broadcast.id is not None
