@@ -1,6 +1,6 @@
 # MagicBell Python SDK
 
-<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="magicbell logo purple"></p>
+<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
 This SDK provides convenient access to the <a href="https://magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
 It includes helpers for creating notifications, managing users, managing projects, and executing GraphQL.
@@ -32,43 +32,43 @@ Python 3.8+
 ### Poetry
 
 ```shell
-poetry add magicbell
+poetry add belfry_magicbell
 ```
 
 Then import the package:
 
 ```python
-import magicbell
+import belfry_magicbell
 ```
 
 ### Pip
 ```shell
-pip install magicbell
+pip install belfry_magicbell
 ```
 
 Then import the package:
 
 ```python
-import magicbell
+import belfry_magicbell
 ```
 
 ## Getting Started
 
 ```python
-import magicbell
-from magicbell.configuration import Configuration
+import belfry_magicbell
+from belfry_magicbell.configuration import Configuration
 
 config = Configuration(
     api_key="YOUR_API_KEY",
     api_secret="YOUR_API_SECRET",
 )
-async with magicbell.MagicBell(config) as mb:
+async with belfry_magicbell.MagicBell(config) as mb:
     # Send a notification
     await mb.realtime.create_notification(
-        magicbell.WrappedNotification(
-            notification=magicbell.Notification(
+        belfry_magicbell.WrappedNotification(
+            notification=belfry_magicbell.Notification(
                 title="My first notification from python!",
-                recipients=[magicbell.Recipient(email="dan@example.com")],
+                recipients=[belfry_magicbell.Recipient(email="dan@example.com")],
             )
         )
     )
@@ -83,13 +83,13 @@ See the [MagicBell API documentation](https://www.magicbell.com/docs/rest-api/re
 
 ### Configuration
 
-Configuration can be done explicitly using the `magicbell.Configuration` class,
+Configuration can be done explicitly using the `belfry_magicbell.Configuration` class,
 or implicitly by setting environment variables with the `MAGICBELL_` prefix.
 
 #### Explicit Configuration
 
 ```python
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 
 
 # Create a configuration object with the required parameters
@@ -107,7 +107,7 @@ export MAGICBELL_API_SECRET="YOUR_API_SECRET"
 ```
 
 ```python
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 
 
 config = Configuration()
