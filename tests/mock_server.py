@@ -104,7 +104,7 @@ async def http_exception(request: Request, exc: HTTPException):
 app = Starlette(debug=True, exception_handlers={HTTPException: http_exception})
 
 
-@app.route("/notifications", methods=["POST"])
+@app.route("/broadcast", methods=["POST"])
 async def create_notifications(request: Request):
     verify_api_key_and_secret(request)
 

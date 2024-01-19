@@ -4,8 +4,8 @@ import httpx
 import orjson
 from pydantic import BaseModel
 
-from magicbell import errors
-from magicbell.model import Response, ResponseBodyT
+from belfry_magicbell import errors
+from belfry_magicbell.model import Response, ResponseBodyT
 
 
 def check_response(response: httpx.Response) -> None:

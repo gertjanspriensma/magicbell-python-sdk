@@ -1,6 +1,6 @@
 # MagicBell Python SDK
 
-<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="magicbell logo purple"></p>
+<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
 This SDK provides convenient access to the <a href="https://magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
 It includes helpers for creating notifications, managing users, managing projects, and executing GraphQL.
@@ -56,7 +56,7 @@ import magicbell
 
 ```python
 import magicbell
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 
 config = Configuration(
     api_key="YOUR_API_KEY",
@@ -89,7 +89,7 @@ or implicitly by setting environment variables with the `MAGICBELL_` prefix.
 #### Explicit Configuration
 
 ```python
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 
 
 # Create a configuration object with the required parameters
@@ -107,7 +107,7 @@ export MAGICBELL_API_SECRET="YOUR_API_SECRET"
 ```
 
 ```python
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 
 
 config = Configuration()

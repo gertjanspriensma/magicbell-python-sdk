@@ -32,7 +32,7 @@ class RealtimeAPI(BaseAPI):
         https://www.magicbell.com/docs/rest-api/idempotent-requests
         """
         response = await self.client.post(
-            "/notifications",
+            "/broadcast",
             headers=self.configuration.get_general_headers(idempotency_key=idempotency_key),
             content=build_request_content(wrapped_notification),
         )

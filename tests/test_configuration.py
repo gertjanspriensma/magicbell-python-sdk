@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from magicbell.configuration import Configuration
+from belfry_magicbell.configuration import Configuration
 
 
 class TestConfiguration:
