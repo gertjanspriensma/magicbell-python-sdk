@@ -1,7 +1,7 @@
 import typing
 
-from pydantic_settings import SettingsConfigDict, BaseSettings
 from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from ._version import __version__
 
@@ -27,14 +27,17 @@ class Configuration(BaseSettings):
         "https://api.belfry_magicbell.com", description="The base URL for the Magicbell API."
     )
     api_key: typing.Optional[str] = Field(
-        description="API key for the Magicbell API, sent as `X-MAGICBELL-API-KEY` header.", default=None
+        description="API key for the Magicbell API, sent as `X-MAGICBELL-API-KEY` header.",
+        default=None,
     )
     api_secret: typing.Optional[str] = Field(
-        description="API secret for the Magicbell API, sent as `X-MAGICBELL-API-SECRET` header.", default=None
+        description="API secret for the Magicbell API, sent as `X-MAGICBELL-API-SECRET` header.",
+        default=None,
     )
 
     user_jwt: typing.Optional[str] = Field(
-        description="A MagicBell user JWT to access protected resources such as projects..", default=None
+        description="A MagicBell user JWT to access protected resources such as projects..",
+        default=None,
     )
 
     request_timeout_seconds: float = Field(
