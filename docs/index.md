@@ -1,6 +1,6 @@
 # MagicBell Python SDK
 
-<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="magicbell logo purple"></p>
+<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
 This SDK provides convenient access to the <a href="https://belfry_magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
 It includes helpers for creating notifications, managing users, managing projects, and executing GraphQL.
@@ -32,7 +32,7 @@ Python 3.8+
 ### Poetry
 
 ```shell
-poetry add magicbell
+poetry add belfry_magicbell
 ```
 
 Then import the package:
@@ -43,7 +43,7 @@ import belfry_magicbell
 
 ### Pip
 ```shell
-pip install magicbell
+pip install belfry_magicbell
 ```
 
 Then import the package:

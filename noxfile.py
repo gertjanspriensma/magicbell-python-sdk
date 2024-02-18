@@ -1,16 +1,16 @@
 import nox
 import nox_poetry
 
-LINT_PATHS = ["magicbell", "noxfile.py", "tests"]
+LINT_PATHS = ["belfry_magicbell", "noxfile.py", "tests"]
 
 nox.options.reuse_existing_virtualenv = True
 nox.options.sessions = ["lint", "test"]
 
 
-@nox_poetry.session(python=["3.8", "3.9", "3.10", "3.11"])
+@nox_poetry.session(python=["3.11"])
 def test(session: nox_poetry.Session):
     session.run_always("poetry", "install", external=True)
-    session.run("pytest", "-v", "--cov=magicbell")
+    session.run("pytest", "-v", "--cov=belfry_magicbell")
 
 
 @nox_poetry.session(python="3.8")

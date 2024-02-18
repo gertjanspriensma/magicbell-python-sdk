@@ -24,7 +24,11 @@ class TestAuthenticationErrorHandling:
         with pytest.raises(errors.MagicBellHTTPClientError) as exc_info:
             await magicbell_client.realtime.create_notification(
                 belfry_magicbell.WrappedNotification(
+<<<<<<< HEAD
                     notification=belfry_magicbell.Notification(
+=======
+                    broadcast=belfry_magicbell.Notification(
+>>>>>>> 9e3c9fc6da0445ab7e73a859355319eae919dae5
                         title="Test",
                         recipients=[belfry_magicbell.Recipient(email="test@example.com")],
                     )
@@ -42,7 +46,11 @@ class TestAuthenticationErrorHandling:
         with pytest.raises(errors.MagicBellHTTPClientError) as exc_info:
             await magicbell_client.realtime.create_notification(
                 belfry_magicbell.WrappedNotification(
+<<<<<<< HEAD
                     notification=belfry_magicbell.Notification(
+=======
+                    broadcast=belfry_magicbell.Notification(
+>>>>>>> 9e3c9fc6da0445ab7e73a859355319eae919dae5
                         title="Test",
                         recipients=[belfry_magicbell.Recipient(email="test@example.com")],
                     )

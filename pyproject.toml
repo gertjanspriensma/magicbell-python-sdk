@@ -54,7 +54,7 @@ line-length = 100
 
 [tool.coverage.run]
 branch = false
-omit = ["magicbell/_version.py", "*/tests/*"]
+omit = ["belfry_magicbell/_version.py", "*/tests/*"]
 
 [tool.coverage.report]
 exclude_lines = ["if self.debug:",
@@ -63,4 +63,4 @@ exclude_lines = ["if self.debug:",
                  "raise NotImplementedError",
                  "if __name__ == '__main__':"]
 ignore_errors = true
-omit = ["magicbell/_version.py"]
+omit = ["belfry_magicbell/_version.py"]

@@ -99,7 +99,7 @@ class Notification(BaseModel):
 
 
 class WrappedNotification(BaseModel):
-    notification: Notification
+    broadcast: Notification
 
 
 class CreatedNotificationBroadcast(BaseModel):
@@ -107,4 +107,4 @@ class CreatedNotificationBroadcast(BaseModel):
 
 
 class WrappedCreatedNotificationBroadcast(BaseModel):
-    notification: CreatedNotificationBroadcast
+    broadcast: CreatedNotificationBroadcast

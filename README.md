@@ -1,20 +1,20 @@
 # MagicBell-Python SDK
 
-<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="magicbell logo purple"></p>
+<p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
 This SDK provides convenient access to the <a href="https://belfry_magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
 It includes helpers for creating notifications, managing users, managing projects, and executing GraphQL.
 </p>
 <p align="center">
-<a href="https://github.com/noteable-io/magicbell-python-sdk/actions/workflows/ci.yaml">
-    <img src="https://github.com/noteable-io/magicbell-python-sdk/actions/workflows/ci.yaml/badge.svg" alt="CI" />
+<a href="https://github.com/noteable-io/belfry_magicbell-python-sdk/actions/workflows/ci.yaml">
+    <img src="https://github.com/noteable-io/belfry_magicbell-python-sdk/actions/workflows/ci.yaml/badge.svg" alt="CI" />
 </a>
-<a href="https://codecov.io/gh/noteable-io/magicbell-python-sdk" > 
- <img src="https://codecov.io/gh/noteable-io/magicbell-python-sdk/branch/main/graph/badge.svg?token=RGNWOIPWC0" alt="codecov code coverage"/> 
+<a href="https://codecov.io/gh/noteable-io/belfry_magicbell-python-sdk" > 
+ <img src="https://codecov.io/gh/noteable-io/belfry_magicbell-python-sdk/branch/main/graph/badge.svg?token=RGNWOIPWC0" alt="codecov code coverage"/> 
  </a>
-<img alt="PyPI - License" src="https://img.shields.io/pypi/l/magicbell" />
-<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/magicbell" />
-<img alt="PyPI" src="https://img.shields.io/pypi/v/magicbell">
+<img alt="PyPI - License" src="https://img.shields.io/pypi/l/belfry_magicbell" />
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/belfry_magicbell" />
+<img alt="PyPI" src="https://img.shields.io/pypi/v/belfry_magicbell">
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
 
@@ -34,7 +34,7 @@ Python 3.8+
 ### Poetry
 
 ```shell
-poetry add magicbell
+poetry add belfry_magicbell
 ```
 
 Then import the package:
@@ -45,7 +45,7 @@ import belfry_magicbell
 
 ### Pip
 ```shell
-pip install magicbell
+pip install belfry_magicbell
 ```
 
 Then import the package:
@@ -78,8 +78,8 @@ async with belfry_magicbell.MagicBell(config) as mb:
 
 ### Authentication
 
-Most API calls require your MagicBell project API Key and API Secret.
-Some API calls (i.e. projects) require your MagicBell user JWT (enterprise only).
+Most API calls require your belfry_magicbell project API Key and API Secret.
+Some API calls (i.e. projects) require your belfry_magicbell user JWT (enterprise only).
 
 See the [MagicBell API documentation](https://www.belfry_magicbell.com/docs/rest-api/reference#authentication) for more information.
 

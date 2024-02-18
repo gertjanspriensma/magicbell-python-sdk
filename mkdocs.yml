@@ -15,8 +15,8 @@ nav:
       - 'UserAPI': reference/user-api.md
       - 'ProjectAPI': reference/project-api.md
       - 'GraphQLAPI': reference/graphql-api.md
-repo_url: https://github.com/noteable-io/magicbell-python-sdk
-repo_name: noteable-io/magicbell-python-sdk
+repo_url: https://github.com/BelfrySoftware/magicbell-python-sdk
+repo_name: BelfrySoftware/magicbell-python-sdk
 edit_uri: edit/main/docs/
 
 # Material theme config
