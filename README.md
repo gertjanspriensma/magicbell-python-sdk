@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
-This SDK provides convenient access to the <a href="https://belfry_magicbell.com/docs/rest-api/overview">belfry_magicbell REST API</a> from applications written in Python. 
+This SDK provides convenient access to the <a href="https://belfry_magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
 It includes helpers for creating notifications, managing users, managing projects, and executing GraphQL.
 </p>
 <p align="center">
@@ -64,7 +64,7 @@ config = Configuration(
     api_key="YOUR_API_KEY",
     api_secret="YOUR_API_SECRET",
 )
-async with belfry_magicbell.belfry_magicbell(config) as mb:
+async with belfry_magicbell.MagicBell(config) as mb:
     # Send a notification
     await mb.realtime.create_notification(
         belfry_magicbell.WrappedNotification(
@@ -81,12 +81,12 @@ async with belfry_magicbell.belfry_magicbell(config) as mb:
 Most API calls require your belfry_magicbell project API Key and API Secret.
 Some API calls (i.e. projects) require your belfry_magicbell user JWT (enterprise only).
 
-See the [belfry_magicbell API documentation](https://www.belfry_magicbell.com/docs/rest-api/reference#authentication) for more information.
+See the [MagicBell API documentation](https://www.belfry_magicbell.com/docs/rest-api/reference#authentication) for more information.
 
 ### Configuration
 
 Configuration can be done explicitly using the `belfry_magicbell.Configuration` class,
-or implicitly by setting environment variables with the `belfry_magicbell_` prefix.
+or implicitly by setting environment variables with the `MAGICBELL_` prefix.
 
 #### Explicit Configuration
 

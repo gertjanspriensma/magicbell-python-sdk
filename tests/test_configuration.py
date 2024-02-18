@@ -11,7 +11,7 @@ class TestConfiguration:
         env_updates = {
             "MAGICBELL_API_KEY": "my-api-key",
             "MAGICBELL_API_SECRET": "my-api-secret",
-            "MAGICBELL_API_URL": "https://api2.magicbell.com",
+            "MAGICBELL_API_URL": "https://api2.belfry_magicbell.com",
             "MAGICBELL_USER_JWT": "my-user-jwt",
             "MAGICBELL_REQUEST_TIMEOUT_SECONDS": "10.0",
         }
@@ -35,7 +35,7 @@ class TestConfiguration:
 
         assert config.api_key == "my-api-key"
         assert config.api_secret == "my-api-secret"
-        assert config.api_url == "https://api2.magicbell.com"
+        assert config.api_url == "https://api2.belfry_magicbell.com"
         assert config.user_jwt == "my-user-jwt"
         assert config.request_timeout_seconds == 10.0
 
@@ -44,7 +44,7 @@ class TestConfiguration:
 
         assert config.api_key is None
         assert config.api_secret is None
-        assert config.api_url == "https://api.magicbell.com"
+        assert config.api_url == "https://api.belfry_magicbell.com"
         assert config.user_jwt is None
         assert config.request_timeout_seconds == 5.0
 
@@ -52,14 +52,14 @@ class TestConfiguration:
         config = Configuration(
             api_key="my-api-key",
             api_secret="my-api-secret",
-            api_url="https://api2.magicbell.com",
+            api_url="https://api2.belfry_magicbell.com",
             user_jwt="my-user-jwt",
             request_timeout_seconds=10.0,
         )
 
         assert config.api_key == "my-api-key"
         assert config.api_secret == "my-api-secret"
-        assert config.api_url == "https://api2.magicbell.com"
+        assert config.api_url == "https://api2.belfry_magicbell.com"
         assert config.user_jwt == "my-user-jwt"
         assert config.request_timeout_seconds == 10.0
 
@@ -69,7 +69,7 @@ class TestGetGeneralHeaders:
         config = Configuration(
             api_key="my-api-key",
             api_secret="my-api-secret",
-            api_url="https://api2.magicbell.com",
+            api_url="https://api2.belfry_magicbell.com",
             user_jwt="my-user-jwt",
             request_timeout_seconds=10.0,
         )
@@ -105,7 +105,7 @@ class TestGetUserHeaders:
         config = Configuration(
             api_key="my-api-key",
             api_secret="my-api-secret",
-            api_url="https://api2.magicbell.com",
+            api_url="https://api2.belfry_magicbell.com",
             user_jwt="my-user-jwt",
             request_timeout_seconds=10.0,
         )

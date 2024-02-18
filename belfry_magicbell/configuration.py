@@ -1,6 +1,7 @@
 import typing
 
-from pydantic import BaseSettings, Field
+from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from ._version import __version__
 
@@ -23,17 +24,20 @@ class Configuration(BaseSettings):
     """
 
     api_url: str = Field(
-        "https://api.magicbell.com", description="The base URL for the Magicbell API."
+        "https://api.belfry_magicbell.com", description="The base URL for the Magicbell API."
     )
     api_key: typing.Optional[str] = Field(
-        description="API key for the Magicbell API, sent as `X-MAGICBELL-API-KEY` header."
+        description="API key for the Magicbell API, sent as `X-MAGICBELL-API-KEY` header.",
+        default=None,
     )
     api_secret: typing.Optional[str] = Field(
-        description="API secret for the Magicbell API, sent as `X-MAGICBELL-API-SECRET` header."
+        description="API secret for the Magicbell API, sent as `X-MAGICBELL-API-SECRET` header.",
+        default=None,
     )
 
     user_jwt: typing.Optional[str] = Field(
-        description="A MagicBell user JWT to access protected resources such as projects.."
+        description="A MagicBell user JWT to access protected resources such as projects..",
+        default=None,
     )
 
     request_timeout_seconds: float = Field(
@@ -41,9 +45,7 @@ class Configuration(BaseSettings):
         description="The timeout for requests. "
         "An exception will be raised if the request takes longer than this.",
     )
-
-    class Config:
-        env_prefix = "magicbell_"
+    model_config = SettingsConfigDict(env_prefix="magicbell_")
 
     def get_general_headers(
         self, idempotency_key: typing.Optional[str] = None
