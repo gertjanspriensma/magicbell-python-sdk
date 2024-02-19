@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1] - 2024-02-19
+Fix pydantic 2 req version
+
 ## [2.1.0] - 2023-09-24
 Support Pydantic v2 + new magicbell endpoints
 
