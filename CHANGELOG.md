@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.4] - 2024-03-01
+Update the api endpoint
+
 ## [2.1.3] - 2024-02-21
 Move off of orjson in favor of pydantic
 
