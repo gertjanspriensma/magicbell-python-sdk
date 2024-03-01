@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://assets.noteable.io/github/2022-07-29/MB_logo_Purple_2800x660.png" width="50%" alt="belfry_magicbell logo purple"></p>
 <p align="center">
-This SDK provides convenient access to the <a href="https://belfry_magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
+This SDK provides convenient access to the <a href="https://magicbell.com/docs/rest-api/overview">MagicBell REST API</a> from applications written in Python. 
 It includes helpers for creating notifications, managing users, managing projects, and executing GraphQL.
 </p>
 <p align="center">
@@ -20,7 +20,7 @@ It includes helpers for creating notifications, managing users, managing project
 
 ---------
 
-This is an unofficial Python SDK for [MagicBell](https://belfry_magicbell.com) open sourced with ❤️ by <a href="https://noteable.io">Noteable</a>, a collaborative notebook platform that enables teams to use and visualize data, together.
+This is an unofficial Python SDK for [MagicBell](https://magicbell.com) open sourced with ❤️ by <a href="https://noteable.io">Noteable</a>, a collaborative notebook platform that enables teams to use and visualize data, together.
 
 [Install](#installation) | [Getting Started](#getting-started) | [Examples](./examples) | [License](./LICENSE) | [Code of Conduct](./CODE_OF_CONDUCT.md) | [Contributing](./CONTRIBUTING.md)
 
@@ -81,7 +81,7 @@ async with belfry_magicbell.MagicBell(config) as mb:
 Most API calls require your belfry_magicbell project API Key and API Secret.
 Some API calls (i.e. projects) require your belfry_magicbell user JWT (enterprise only).
 
-See the [MagicBell API documentation](https://www.belfry_magicbell.com/docs/rest-api/reference#authentication) for more information.
+See the [MagicBell API documentation](https://www.magicbell.com/docs/rest-api/reference#authentication) for more information.
 
 ### Configuration
 
