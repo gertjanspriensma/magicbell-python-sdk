@@ -47,6 +47,14 @@ class Configuration(BaseSettings):
     )
     model_config = SettingsConfigDict(env_prefix="magicbell_")
 
+    def get_user_external_id_headers(self, external_id: str):
+        """
+        Return headers to use when the users id is needed to be included in the request
+        """
+        headers = self.get_general_headers()
+        headers["x-magicbell-user-external-id"] = external_id
+        return headers
+
     def get_general_headers(
         self, idempotency_key: typing.Optional[str] = None
     ) -> typing.Dict[str, str]:

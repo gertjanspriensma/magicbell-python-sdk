@@ -2,7 +2,7 @@ import typing
 
 import httpx
 
-from .api import ChannelsAPI, GraphQLAPI, ProjectAPI, RealtimeAPI, UserAPI
+from .api import ChannelsAPI, GraphQLAPI, ProjectAPI, PushSubscriptionAPI, RealtimeAPI, UserAPI
 from .configuration import Configuration
 
 
@@ -57,6 +57,7 @@ class MagicBell:
         self.projects = ProjectAPI(self.http_client, self.configuration)
         self.realtime = RealtimeAPI(self.http_client, self.configuration)
         self.users = UserAPI(self.http_client, self.configuration)
+        self.push_subscriptions = PushSubscriptionAPI(self.http_client, self.configuration)
         self.channels = ChannelsAPI(self.http_client, self.configuration)
         self.graphql = GraphQLAPI(self.http_client, self.configuration)
 

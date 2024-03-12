@@ -11,6 +11,7 @@ from .model import (  # noqa: F401
     NotificationProvidersOverrides,
     Project,
     ProjectInput,
+    PushSubscription,
     Recipient,
     User,
     WrappedChannels,
@@ -19,5 +20,6 @@ from .model import (  # noqa: F401
     WrappedProject,
     WrappedProjectInput,
     WrappedProjects,
+    WrappedPushSubscription,
     WrappedUser,
 )
