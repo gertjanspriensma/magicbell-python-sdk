@@ -1,7 +1,4 @@
-import pytest
-
 import belfry_magicbell
-from belfry_magicbell import errors
 
 
 class TestCreatePushSubscription:
