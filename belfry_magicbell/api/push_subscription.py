@@ -1,7 +1,7 @@
 import typing
 
-from ..model.response import Response
 from ..model.push_subscription import WrappedPushSubscription
+from ..model.response import Response
 from ._base import BaseAPI
 from ._parsing import build_request_content, build_response
 
@@ -25,9 +25,7 @@ class PushSubscriptionAPI(BaseAPI):
         return build_response(response=response, out_type=WrappedPushSubscription).parsed
 
     async def delete_push_subscription(
-        self,
-        external_id: str,
-        device_token: str
+        self, external_id: str, device_token: str
     ) -> Response[typing.Type[None]]:
         """
         Deletes the registered device token to remove the mobile push subscription.
@@ -36,7 +34,6 @@ class PushSubscriptionAPI(BaseAPI):
         """
         url = f"/push_subscriptions/{device_token}"
         response = await self.client.delete(
-            url,
-            headers=self.configuration.get_user_external_id_headers(external_id=external_id)
+            url, headers=self.configuration.get_user_external_id_headers(external_id=external_id)
         )
         return build_response(response=response, out_type=None)

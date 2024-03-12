@@ -2,7 +2,7 @@ import typing
 
 import httpx
 
-from .api import ChannelsAPI, GraphQLAPI, ProjectAPI, RealtimeAPI, UserAPI, PushSubscriptionAPI
+from .api import ChannelsAPI, GraphQLAPI, ProjectAPI, PushSubscriptionAPI, RealtimeAPI, UserAPI
 from .configuration import Configuration
 
 

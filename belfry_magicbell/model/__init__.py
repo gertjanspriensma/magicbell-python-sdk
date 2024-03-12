@@ -17,7 +17,7 @@ from .project import (  # noqa: F401
     WrappedProjectInput,
     WrappedProjects,
 )
+from .push_subscription import PushSubscription, WrappedPushSubscription  # noqa: F401
 from .response import Response, ResponseBodyT  # noqa: F401
 from .user import User, WrappedUser  # noqa: F401
 from .workspace import Workspace  # noqa: F401
-from .push_subscription import PushSubscription, WrappedPushSubscription  # noqa: F401

@@ -54,7 +54,7 @@ class Configuration(BaseSettings):
         headers = self.get_general_headers()
         headers["x-magicbell-user-external-id"] = external_id
         return headers
-        
+
     def get_general_headers(
         self, idempotency_key: typing.Optional[str] = None
     ) -> typing.Dict[str, str]:
@@ -85,7 +85,6 @@ class Configuration(BaseSettings):
         if self.user_jwt:
             headers["Authorization"] = f"Bearer {self.user_jwt}"
         return headers
-    
 
     def get_base_headers(self) -> typing.Dict[str, str]:
         """Return headers that should be used for all requests."""

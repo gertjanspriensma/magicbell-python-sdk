@@ -211,6 +211,7 @@ async def delete_push_subscription(request: Request):
 
     return JSONResponse({"message": "Successfully deleted push_subscription"})
 
+
 @app.route("/users", methods=["POST"])
 async def create_user(request: Request):
     verify_api_key_and_secret(request)
