@@ -20,4 +20,6 @@ from .model import (  # noqa: F401
     WrappedProjectInput,
     WrappedProjects,
     WrappedUser,
+    PushSubscription,
+    WrappedPushSubscription
 )

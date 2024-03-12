@@ -198,6 +198,19 @@ async def manage_project(request: Request):
         return JSONResponse({"message": "Successfully deleted project"})
 
 
+@app.route("/push_subscriptions", methods=["POST"])
+async def create_push_subscription(request: Request):
+    verify_api_key_and_secret(request)
+    body = await request.json()
+    return JSONResponse(body)
+
+
+@app.route("/push_subscriptions/{device_token}", methods=["DELETE"])
+async def delete_push_subscription(request: Request):
+    verify_api_key_and_secret(request)
+
+    return JSONResponse({"message": "Successfully deleted push_subscription"})
+
 @app.route("/users", methods=["POST"])
 async def create_user(request: Request):
     verify_api_key_and_secret(request)

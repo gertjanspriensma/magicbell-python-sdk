@@ -26,7 +26,7 @@ def build_response(
     """
 
     check_response(response)
-
+    
     return Response(
         status_code=response.status_code,
         content=response.content,
